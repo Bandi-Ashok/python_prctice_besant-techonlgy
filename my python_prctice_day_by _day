@@ -1,0 +1,359 @@
+practice questions for today:
+1.What is type casting? Give an example.
+2.Convert the following:
+a. "123" to integer.
+
+b. 25 to string.
+
+c. "3.14" to float.
+
+3.What error occurs if you try int("abc")? Why? correct it.
+4.How do you create a multi-line string in Python?
+5.How do you include a quote inside a string?
+6. Convert price = "99.99" to a float.
+7. Create a string: I'm learning "Python"
+use escape charachers to print
+8.what is raw string? what is its use?
+
+answers above quesations for me practice learning 
+
+✅ 1. What is type casting? Give an example.
+Answer:
+Type casting is the process of converting one data type to another manually in Python.
+
+Example:
+
+python
+Copy
+Edit
+a = "123"
+b = int(a)   # '123' (string) → 123 (integer)
+print(b + 10)  # Output: 133
+✅ 2. Convert the following:
+a. "123" to integer:
+
+python
+Copy
+Edit
+x = int("123")  # Output: 123
+b. 25 to string:
+
+python
+Copy
+Edit
+x = str(25)     # Output: "25"
+c. "3.14" to float:
+
+python
+Copy
+Edit
+x = float("3.14")  # Output: 3.14
+✅ 3. What error occurs if you try int("abc")? Why? Correct it.
+Answer:
+
+python
+Copy
+Edit
+int("abc")  # ❌ ValueError: invalid literal for int() with base 10: 'abc'
+Why?
+Because "abc" is not a number.
+
+✅ Correct usage:
+
+python
+Copy
+Edit
+# Valid number string:
+x = int("123")  # Output: 123
+✅ 4. How do you create a multi-line string in Python?
+Answer:
+Use triple quotes (''' or """).
+
+Example:
+
+python
+Copy
+Edit
+text = '''This is
+a multi-line
+string.'''
+print(text)
+✅ 5. How do you include a quote inside a string?
+Answer:
+Use escape characters (\) or alternate quote styles.
+
+Examples:
+
+python
+Copy
+Edit
+text = "She said, \"Hello!\""
+# or
+text = 'She said, "Hello!"'
+print(text)
+✅ 6. Convert price = "99.99" to a float:
+python
+Copy
+Edit
+price = "99.99"
+price_float = float(price)
+print(price_float)  # Output: 99.99
+✅ 7. Create a string: I'm learning "Python" using escape characters:
+python
+Copy
+Edit
+text = "I'm learning \"Python\""
+print(text)
+✅ 8. What is a raw string? What is its use?
+Answer:
+A raw string treats backslashes (\) as literal characters, not escape characters.
+
+Use: It's helpful when working with file paths or regex patterns.
+
+Example:
+
+python
+Copy
+Edit
+path = r"C:\Users\Ashok\Documents"
+print(path)
+# Output: C:\Users\Ashok\Documents
+Without raw string:
+
+python
+Copy
+Edit
+path = "C:\\Users\\Ashok\\Documents"
+
+
+
+
+
+
+
+
+
+second prcatice learning python day 2  probealms sloving in git hub?
+
+practice questions:
+1.Question: Write a Python program that takes a string as input and prints its length.
+Example Input: "Hello World"
+Expected Output: The length of the string is: 11
+
+2.Question: Given the string data = "abcdefghijklmnop", write Python code to:
+A. Get the first 5 characters.
+B. Get the last 3 characters.
+C. Get characters from index 2 to 7 (inclusive of 2, exclusive of 8).
+D. Get every second character.
+E. Reverse the string.
+
+3.Question: If you have a string sentence = "This is a long sentence.", how would you extract the word "long" using slicing?
+
+4.Question: Write a Python program that takes a string as input and prints each character of the string on a new line using a for loop.
+
+5.Question: Modify the program in question 4 to also print the index of each character alongside the character.
+
+6.Question: You have the variables product = "Laptop" and price = 60,000. Use an f-string to print the following sentence: "The Laptop costs 60,000."
+
+7.Question: Given the variables name = "vikas" and score = 85, use an f-string to print: "vikas's score is 85."
+
+8.Question: Using the .format() method, create the same output as in Question 6: "The Laptop costs 60,000."
+
+9.Question: Write a Python program that takes a string as input and uses the enumerate() function to print each character along with its index.
+
+10.Question: Write a Python program that takes a string as input and uses the range() function along with a for loop to print each character of the string in reverse order of their index.
+
+
+
+
+above answers lerning my practice?
+
+text = input("Enter a string: ")
+print("The length of the string is:", len(text))
+# Example input: Hello World → Output: 11
+✅ 2. String Slicing
+python
+Copy
+Edit
+data = "abcdefghijklmnop"
+
+# A. First 5 characters
+print("First 5:", data[:5])  # Output: abcde
+
+# B. Last 3 characters
+print("Last 3:", data[-3:])  # Output: nop
+
+# C. Characters from index 2 to 7
+print("Index 2 to 7:", data[2:8])  # Output: cdefgh
+
+# D. Every second character
+print("Every second:", data[::2])  # Output: acegikmo
+
+# E. Reverse the string
+print("Reversed:", data[::-1])  # Output: ponmlkjihgfedcba
+✅ 3. Extract "long" using slicing
+python
+Copy
+Edit
+sentence = "This is a long sentence."
+word = sentence[10:14]
+print("Extracted word:", word)  # Output: long
+✅ 4. Print each character on a new line
+python
+Copy
+Edit
+text = input("Enter a string: ")
+for char in text:
+    print(char)
+✅ 5. Print each character with index
+python
+Copy
+Edit
+text = input("Enter a string: ")
+for index, char in enumerate(text):
+    print(f"Index {index}: {char}")
+✅ 6. f-string with variables
+python
+Copy
+Edit
+product = "Laptop"
+price = 60000
+print(f"The {product} costs {price}.")  # Output: The Laptop costs 60000.
+✅ 7. f-string with name and score
+python
+Copy
+Edit
+name = "vikas"
+score = 85
+print(f"{name}'s score is {score}.")  # Output: vikas's score is 85.
+✅ 8. .format() method
+python
+Copy
+Edit
+product = "Laptop"
+price = 60000
+print("The {} costs {}.".format(product, price))  # Output: The Laptop costs 60000.
+✅ 9. enumerate() to print characters with index
+python
+Copy
+Edit
+text = input("Enter a string: ")
+for index, char in enumerate(text):
+    print(f"Index {index}: {char}")
+✅ 10. Print each character in reverse order of index
+python
+Copy
+Edit
+text = input("Enter a string: ")
+for i in range(len(text) - 1, -1, -1):
+    print(f"Index {i}: {text[i]}")
+
+
+
+
+day 3 probelams sloving in git hub 29-07- 2025
+
+
+Practice questions for today:
+1. Write a program that takes a year as input. Determine if the year is a leap year.
+2. Write a program that takes an integer as input and checks if "The number is divisible by 3 only."
+3. Write a program that takes two numbers as input and prints the smaller of the two.
+4. Write a program that takes two numbers as input and prints the larger of the two.
+5. Write a program that takes a single letter as input. Determine if it's a vowel (a, e, i, o, u - consider both uppercase and lowercase) or a consonant.
+6. Write a program that takes a person's age as input and prints their age category: "Child" (0-12), "Teenager" (13-19), "Adult" (20-64), or "Senior" (65 and above).
+7. Write a program that takes a password as input. If the length of the password is 8 or more characters, print "Strong password"; otherwise, print "Weak password."
+
+
+
+day 3 probelams sloving answers above quesations?
+
+1. Leap Year Checker
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap year")
+else:
+    print("Not a leap year")
+
+
+ 2. Divisible by 3 Only
+
+num = int(input("Enter an integer: "))
+if num % 3 == 0 and num % 2 != 0 and num % 5 != 0:
+    print("The number is divisible by 3 only")
+else:
+    print("The number is not divisible by 3 only")
+
+
+3. Print Smaller Number
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("Smaller number is:", a if a < b else b)
+
+
+
+4. Print Larger Number
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("Larger number is:", a if a > b else b)
+
+
+5. Vowel or Consonant
+
+letter = input("Enter a single letter: ").lower()
+if letter in 'aeiou':
+    print("Vowel")
+elif letter.isalpha():
+    print("Consonant")
+else:
+    print("Invalid input")
+
+
+
+6. Age Category
+
+age = int(input("Enter your age: "))
+if age < 0:
+    print("Invalid age")
+elif age <= 12:
+    print("Child")
+elif age <= 19:
+    print("Teenager")
+elif age <= 64:
+    print("Adult")
+else:
+    print("Senior")
+
+
+7. Password Strength Checker
+
+password = input("Enter a password: ")
+if len(password) >= 8:
+    print("Strong password")
+else:
+    print("Weak password")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
