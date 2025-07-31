@@ -528,6 +528,247 @@ while i < 5:
     print(i)
 
 
+31 - 7- 2025
+
+Practice questions for today and tomorrow:
+
+Question: Write a program that takes a sentence as input. Capitalize the first letter of the sentence and print the modified sentence.
+
+Question: Write a program that takes a string as input. Convert the entire string to lowercase and print it.
+
+Question: Write a program that takes a string as input. Convert the entire string to uppercase and print it.
+
+
+Question: Write a program that takes a sentence as input. Convert the sentence to title case (where the first letter of each word is capitalized) and print it.
+
+Question: Write a program that takes a string with leading spaces as input. Remove the leading spaces and print the stripped string.
+
+Question: Write a program that takes a string with trailing spaces as input. Remove the trailing spaces and print the stripped string.
+
+Question: Write a program that takes a string with leading and trailing spaces as input. Remove both leading and trailing spaces and print the stripped string.
+
+Question: Write a program that takes a sentence and two words (old and new) as input. Replace all occurrences of the old word with the new word in the sentence and print the result.
+
+Question: Write a program that takes a string and a character as input. Count the number of times the character appears in the string (case-insensitive) using a loop and conditional statements (or directly with count() after converting the string to a single case).
+
+Question: Write a program that takes a string and a substring as input. Find the index of the first occurrence of the substring. If the substring is not found, print a message indicating that.
+
+Question: Write a program that takes a string and a substring as input. Find all occurrences of the substring in the string using a while loop and the find() method. Print the starting index of each occurrence.
+
+Question: Write a program that takes a comma-separated string of items as input. Split the string into a list of individual items and print each item.
+
+Question: Write a program that takes a filename as input. Check if the filename ends with ".txt". If it does, print "This is a text file."; otherwise, print "This is not necessarily a text file."
+
+Questions: Write a program that takes a line of text as input. Check if the line starts with "Subject: ". If it does, print "This line is likely an email subject."; otherwise, print "This line does not appear to be an email subject."
+
+Question: Write a program that takes a string as input and checks if all characters in the string are alphanumeric. Print "Alphanumeric string" or "Not an alphanumeric string."
+
+Question: Write a program that takes a string as input and checks if all characters in the string are alphabetic. Print "Alphabetic string" or "Not an alphabetic string."
+
+Question: Write a program that takes a string as input and checks if all characters in the string are decimal digits. Print "Decimal string" or "Not a decimal string."
+
+Question: Write a program that takes a string as input and checks if all characters in the string are digits. Print "Digit string" or "Not a digit string."
+
+Question: Write a program that takes a string as input and checks if all characters in the string are numeric characters. Print "Numeric string" or "Not a numeric string
+
+Question: Write a program that takes a string as input. Check if all cased characters in the string are lowercase. If they are, print "All lowercase"; otherwise, print "Not all lowercase."
+
+Question: Write a program that takes a string as input. Check if all cased characters in the string are uppercase. If they are, print "All uppercase"; otherwise, print "Not all uppercase."
+
+Question: Write a program that takes a string as input. Check if the string is in title case. If it is, print "Title case string"; otherwise, print "Not a title case string."
+
+Question: Write a program that takes a string as input. Check if all characters in the string are whitespace characters. If they are, print "Whitespace string"; otherwise, print "Not a whitespace string."
+
+
+Question: Write a program that takes a number (as a string) and a desired width as input. Pad the beginning of the number with leading zeros so that it reaches the specified width. Print the zero-filled string.
+
+
+Question: Write a program that takes a string and a width as input. Center the string within the specified width, using '*' as the fill character, and print the result.
+
+Question: Write a program that takes two strings as input. Convert both strings to their casefolded forms and then check if they are equal. Print "Case-insensitive match" or "No case-insensitive match."
+
+
+
+
+above quesations answers?
+
+
+# 1. Capitalize the first letter of the sentence
+sentence = input("Enter a sentence: ")
+print("Capitalized:", sentence.capitalize())
+
+# 2. Convert entire string to lowercase
+string = input("Enter a string: ")
+print("Lowercase:", string.lower())
+
+# 3. Convert entire string to uppercase
+string = input("Enter a string: ")
+print("Uppercase:", string.upper())
+
+# 4. Convert to title case
+sentence = input("Enter a sentence: ")
+print("Title Case:", sentence.title())
+
+# 5. Remove leading spaces
+string = input("Enter a string with leading spaces: ")
+print("Stripped Leading:", string.lstrip())
+
+# 6. Remove trailing spaces
+string = input("Enter a string with trailing spaces: ")
+print("Stripped Trailing:", string.rstrip())
+
+# 7. Remove both leading and trailing spaces
+string = input("Enter a string with leading and trailing spaces: ")
+print("Stripped Both:", string.strip())
+
+# 8. Replace word in sentence
+sentence = input("Enter a sentence: ")
+old = input("Enter old word: ")
+new = input("Enter new word: ")
+print("Replaced Sentence:", sentence.replace(old, new))
+
+# 9. Count character occurrences (case-insensitive)
+string = input("Enter a string: ").lower()
+char = input("Enter a character: ").lower()
+count = 0
+for c in string:
+    if c == char:
+        count += 1
+print("Count:", count)
+
+# 10. Find index of first occurrence of substring
+string = input("Enter a string: ")
+substr = input("Enter substring: ")
+index = string.find(substr)
+if index != -1:
+    print("First occurrence at index:", index)
+else:
+    print("Substring not found.")
+
+# 11. Find all occurrences of substring using while loop
+string = input("Enter a string: ")
+substr = input("Enter substring: ")
+start = 0
+while True:
+    index = string.find(substr, start)
+    if index == -1:
+        break
+    print("Found at index:", index)
+    start = index + 1
+
+# 12. Split comma-separated string
+string = input("Enter comma-separated items: ")
+items = string.split(',')
+print("Items:")
+for item in items:
+    print(item.strip())
+
+# 13. Check if filename ends with .txt
+filename = input("Enter filename: ")
+if filename.endswith(".txt"):
+    print("This is a text file.")
+else:
+    print("This is not necessarily a text file.")
+
+# 14. Check if line starts with "Subject: "
+line = input("Enter a line of text: ")
+if line.startswith("Subject: "):
+    print("This line is likely an email subject.")
+else:
+    print("This line does not appear to be an email subject.")
+
+# 15. Check if string is alphanumeric
+string = input("Enter a string: ")
+if string.isalnum():
+    print("Alphanumeric string")
+else:
+    print("Not an alphanumeric string")
+
+# 16. Check if string is alphabetic
+string = input("Enter a string: ")
+if string.isalpha():
+    print("Alphabetic string")
+else:
+    print("Not an alphabetic string")
+
+# 17. Check if string is decimal digits
+string = input("Enter a string: ")
+if string.isdecimal():
+    print("Decimal string")
+else:
+    print("Not a decimal string")
+
+# 18. Check if string is digit
+string = input("Enter a string: ")
+if string.isdigit():
+    print("Digit string")
+else:
+    print("Not a digit string")
+
+# 19. Check if string is numeric
+string = input("Enter a string: ")
+if string.isnumeric():
+    print("Numeric string")
+else:
+    print("Not a numeric string")
+
+# 20. Check if all characters are lowercase
+string = input("Enter a string: ")
+if string.islower():
+    print("All lowercase")
+else:
+    print("Not all lowercase")
+
+# 21. Check if all characters are uppercase
+string = input("Enter a string: ")
+if string.isupper():
+    print("All uppercase")
+else:
+    print("Not all uppercase")
+
+# 22. Check if string is title case
+string = input("Enter a string: ")
+if string.istitle():
+    print("Title case string")
+else:
+    print("Not a title case string")
+
+# 23. Check if all characters are whitespace
+string = input("Enter a string: ")
+if string.isspace():
+    print("Whitespace string")
+else:
+    print("Not a whitespace string")
+
+# 24. Pad number with leading zeros
+number = input("Enter a number: ")
+width = int(input("Enter desired width: "))
+print("Zero-filled:", number.zfill(width))
+
+# 25. Center the string with '*' fill character
+string = input("Enter a string: ")
+width = int(input("Enter width: "))
+print("Centered string:", string.center(width, '*'))
+
+# 26. Casefold comparison of two strings
+str1 = input("Enter first string: ")
+str2 = input("Enter second string: ")
+if str1.casefold() == str2.casefold():
+    print("Case-insensitive match")
+else:
+    print("No case-insensitive match")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
