@@ -828,6 +828,162 @@ print("Updated list:", numbers)
 
 
 
+05 -08 2025 python prctice?
+
+
+
+Practice interview questions for today:
+
+1.What is a list in Python? How does it differ from a tuple?
+2.Explain the concept of mutability in the context of Python lists.
+3.How do you access elements in a list? What is negative indexing?
+4.Explain list slicing with an example. How can you reverse a list using slicing?
+5.Describe the purpose and behavior of the append() and insert() list methods. What are their differences?
+6.How do the remove() and pop() list methods work? What value does pop() return? What happens if you try to remove an element that doesn't exist?
+7.What is the purpose of the index() and count() list methods?
+8.Explain how the sort() method works. How can you sort a list in descending order? Does sort() return a new list?
+9.What does the reverse() method do to a list? Does it return a new list?
+10.What is a nested list in Python? How do you access elements within a nested list? Provide an example.
+11.Explain list comprehension with its basic syntax. What are the advantages of using list comprehension over traditional for loops for list creation?
+12.What is the purpose of the list() constructor? Give an example of how it can be used.
+13.What does the del keyword do in Python when used with lists? How can you delete elements by index or slice? How can you delete the entire list?
+14.What are some built-in functions that can be used with lists (e.g., len(), sum(), min(), max(), sorted())? Explain their purpose.
+
+programming questions:
+
+1.write a programming to Reverse a list without using the reverse() method (use slicing or a loop).
+2.Remove all occurrences of a specific element from a list.
+3.write a program to Find the second largest number in a list.
+4. Use list comprehension to create a list of all even numbers between 1 and 20 (inclusive).
+5. Given a list of numbers, use list comprehension to create a new list containing only the numbers greater than 5.
+6. Given a list, remove a specific range of elements (defined by start and end indices) using the del keyword and slicing.
+7. Given a list of words, use list comprehension to create a new list containing the length of each word.
+8. Write a function that takes a list and a value as input and removes all occurrences of that value from the list in-place.
+9. Write a program that takes a string as input, converts it into a list of characters, reverses the list, and then joins the characters back into a reversed string. Print the reversed string.
+10. Write a program that takes a sentence as input. Split the sentence into a list of words. Then, iterate through the list of words and count the total number of vowels (a, e, i, o, u - case-insensitive) in all the words combined. Print the total vowel count.
+
+
+
+
+
+
+# 1. What is a list in Python? How does it differ from a tuple?
+my_list = [1, 2, 3]
+my_tuple = (1, 2, 3)
+
+# 2. Mutability in lists
+my_list[0] = 10
+
+# 3. Accessing elements and negative indexing
+list = [10, 20, 30]
+print(list[0])   # 10
+print(list[-1])  # 30
+
+# 4. List slicing and reversing
+list = [1, 2, 3, 4, 5]
+print(list[1:4])  # [2, 3, 4]
+print(list[::-1]) # [5, 4, 3, 2, 1]
+
+# 5. append() vs insert()
+list.append(6)
+list.insert(2, 99)
+
+# 6. remove() and pop()
+list.remove(5)
+value = list.pop(2)
+
+# 7. index() and count()
+list.index(3)
+list.count(3)
+
+# 8. sort() ascending and descending
+list.sort()
+list.sort(reverse=True)
+
+# 9. reverse()
+list.reverse()
+
+# 10. Nested list
+nested = [[1, 2], [3, 4]]
+print(nested[1][0])  # 3
+
+# 11. List comprehension
+squares = [x*x for x in range(5)]
+
+# 12. list() constructor
+list("hello")  # ['h', 'e', 'l', 'l', 'o']
+
+# 13. del keyword with lists
+del my_list[2]
+del my_list[1:3]
+# del my_list  # deletes entire list
+
+# 14. Built-in list functions
+len(list)
+sum(list)
+min(list)
+max(list)
+sorted(list)
+
+# Programming Questions:
+
+# 1. Reverse a list without using reverse()
+lst = [1, 2, 3, 4]
+reversed_list = lst[::-1]
+print(reversed_list)
+
+# 2. Remove all occurrences of a specific element
+lst = [1, 2, 3, 2, 4, 2]
+target = 2
+result = [x for x in lst if x != target]
+print(result)
+
+# 3. Find the second largest number
+lst = [4, 5, 6, 7, 9, 9]
+unique = list(set(lst))
+unique.sort()
+print("Second largest:", unique[-2])
+
+# 4. Even numbers between 1 and 20 using list comprehension
+evens = [x for x in range(1, 21) if x % 2 == 0]
+print(evens)
+
+# 5. Numbers greater than 5 using list comprehension
+nums = [1, 6, 3, 9, 2]
+greater = [x for x in nums if x > 5]
+print(greater)
+
+# 6. Remove a range of elements using del
+lst = [10, 20, 30, 40, 50, 60]
+del lst[2:5]
+print(lst)
+
+# 7. Word lengths using list comprehension
+words = ["apple", "banana", "kiwi"]
+lengths = [len(word) for word in words]
+print(lengths)
+
+# 8. Remove all occurrences in-place
+def remove_value(lst, val):
+    while val in lst:
+        lst.remove(val)
+    return lst
+
+print(remove_value([1, 2, 2, 3, 4], 2))
+
+# 9. Reverse string using list conversion
+s = "hello"
+char_list = list(s)
+char_list.reverse()
+reversed_str = ''.join(char_list)
+print(reversed_str)
+
+# 10. Count vowels in a sentence
+sentence = input("Enter sentence: ")
+words = sentence.split()
+vowels = "aeiouAEIOU"
+count = sum(1 for word in words for char in word if char in vowels)
+print("Total vowels:", count)
 
 
 
