@@ -991,6 +991,111 @@ print("Total vowels:", count)
 
 
 
+Practice questions for today:
+1. What is a set in Python? How does it differ from a list and a tuple? What are its key properties?
+2. What is a frozenset? How does it differ from a regular set? When might you use a frozenset?
+3. Can you have mutable data types as elements of a set? Why or why not? What about frozensets?
+4. Explain the purpose and usage of the split() method for strings. Provide an example.
+5. Explain the purpose and usage of the join() method for strings. Provide an example.
+6. What is a dictionary in Python? How does it store data? What are the key properties of a dictionary?
+7. What are the requirements for keys in a Python dictionary? Why are these requirements in place? Can you use a list as a key?
+8. Create two sets, set1 with elements [1, 2, 3, 4, 5] and set2 with elements [4, 5, 6, 7, 8]. Convert these lists to sets.
+9. Find and print the common elements between set1 and set2 created in the previous question.
+10. Write a program that takes a sentence as input, splits it into words, and then prints the unique words in the sentence.
+11. You have a list of words: ["Hello", "World", "Python"]. Use the join() method to create a single string with these words separated by a hyphen "-".
+12. Create a dictionary that stores the capital cities of three countries (e.g., "USA": "Washington D.C.", "France": "Paris", "Japan": "Tokyo").
+13. Given the dictionary from the previous question, ask the user to enter a country and print its capital city. Handle the case where the country is not in the dictionary.
+
+
+
+
+
+
+answers above quesations for realted?
+
+# -----------------------------------
+# Python Practice Questions - Answers
+# -----------------------------------
+
+# 1. What is a set in Python? How does it differ from a list and a tuple? What are its key properties?
+#    - A set is an unordered collection of unique elements.
+#    - Difference:
+#         List -> Ordered, allows duplicates, mutable.
+#         Tuple -> Ordered, allows duplicates, immutable.
+#         Set -> Unordered, no duplicates, mutable (but elements must be immutable).
+#    - Key properties: unordered, no duplicates, mutable (but only immutable elements allowed).
+
+# Example set:
+example_set = {1, 2, 3, 3, 4}
+print("1) Example Set:", example_set)
+
+# 2. What is a frozenset? How does it differ from a regular set? When might you use a frozenset?
+#    - frozenset is immutable version of set. Once created, cannot add/remove elements.
+#    - Use when you need a set as a dictionary key or store it inside another set.
+fs = frozenset([1, 2, 3])
+print("2) Frozenset Example:", fs)
+
+# 3. Can you have mutable data types as elements of a set? Why or why not? What about frozensets?
+#    - No, because set elements must be hashable (immutable).
+#    - You cannot have lists/dicts as set elements, but tuples (immutable) are fine.
+
+# 4. split() method
+sentence = "Python is powerful"
+words = sentence.split()  # Splits by whitespace
+print("4) Split Example:", words)
+
+# 5. join() method
+joined_sentence = "-".join(words)
+print("5) Join Example:", joined_sentence)
+
+# 6. Dictionary
+#    - Dictionary stores data as key-value pairs.
+#    - Keys must be unique and hashable.
+#    - Values can be any type.
+capital_dict = {"USA": "Washington D.C.", "France": "Paris", "Japan": "Tokyo"}
+print("6) Dictionary Example:", capital_dict)
+
+# 7. Requirements for dictionary keys:
+#    - Must be immutable and hashable (str, int, tuple, etc.)
+#    - Cannot use list as a key (TypeError).
+try:
+    bad_dict = {[1, 2, 3]: "Not allowed"}
+except TypeError as e:
+    print("7) List as key error:", e)
+
+# 8. Create two sets from lists
+set1 = set([1, 2, 3, 4, 5])
+set2 = set([4, 5, 6, 7, 8])
+print("8) Set1:", set1)
+print("8) Set2:", set2)
+
+# 9. Common elements between set1 and set2
+common_elements = set1 & set2
+print("9) Common Elements:", common_elements)
+
+# 10. Program to split sentence into unique words
+input_sentence = "Python is fun and Python is powerful"
+unique_words = set(input_sentence.split())
+print("10) Unique Words:", unique_words)
+
+# 11. Join list with hyphen
+words_list = ["Hello", "World", "Python"]
+hyphen_joined = "-".join(words_list)
+print("11) Hyphen Joined String:", hyphen_joined)
+
+# 12. Dictionary with capitals
+capitals = {"USA": "Washington D.C.", "France": "Paris", "Japan": "Tokyo"}
+print("12) Capitals Dictionary:", capitals)
+
+# 13. User input for capital lookup
+country = input("Enter a country name: ").strip()
+capital = capitals.get(country, "Country not found in dictionary")
+print(f"13) Capital of {country}: {capital}")
+
+
+
+
+
 
 
 
