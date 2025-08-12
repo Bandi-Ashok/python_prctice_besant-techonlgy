@@ -684,6 +684,26 @@ if string.isalnum():
 else:
     print("Not an alphanumeric string")
 
+
+
+
+
+11-08-2025
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 16. Check if string is alphabetic
 string = input("Enter a string: ")
 if string.isalpha():
@@ -1091,6 +1111,188 @@ print("12) Capitals Dictionary:", capitals)
 country = input("Enter a country name: ").strip()
 capital = capitals.get(country, "Country not found in dictionary")
 print(f"13) Capital of {country}: {capital}")
+
+
+11-08- 2025
+
+practice questions for today:
+1. Create a dictionary of 5 students with their marks. Print the dictionary.
+2. Access the value of a specific key from a dictionary.
+3. Add a new key–value pair in the dictionary.
+4. Update the value of an existing key in the dictionary.
+5. Remove a key–value pair from the dictionary using pop().
+6. Get all keys of a dictionary using .keys() function.
+7. Get all values of a dictionary using .values() function.
+8. Get all key–value pairs from a dictionary using .items().
+9. Check if a given key exists in the dictionary.
+10. Create a dictionary and print only keys using a loop.
+11. Create a dictionary and print only values using a loop.
+12. Merge two dictionaries.
+13. Write a program to find the key with the maximum value in a dictionary.
+14. Create a nested dictionary and access the inner dictionary value.
+15. Create two lists: one with names and one with marks. Use zip() to combine them into a dictionary.
+16. Create a dictionary using fromkeys() with a list of keys and the same default value.
+
+
+
+
+
+above anserws 11-08-2025
+
+
+# 1. Create a dictionary of 5 students with their marks. Print the dictionary.
+students = {
+    "Alice": 85,
+    "Bob": 92,
+    "Charlie": 78,
+    "David": 88,
+    "Eva": 95
+}
+print("1. Dictionary of students:", students)
+
+# 2. Access the value of a specific key from a dictionary.
+print("2. Marks of Bob:", students["Bob"])
+
+# 3. Add a new key–value pair in the dictionary.
+students["Frank"] = 80
+print("3. After adding Frank:", students)
+
+# 4. Update the value of an existing key in the dictionary.
+students["Alice"] = 90
+print("4. After updating Alice's marks:", students)
+
+# 5. Remove a key–value pair from the dictionary using pop().
+removed_value = students.pop("Charlie")
+print(f"5. Removed Charlie ({removed_value}), new dict:", students)
+
+# 6. Get all keys of a dictionary using .keys() function.
+print("6. All keys:", students.keys())
+
+# 7. Get all values of a dictionary using .values() function.
+print("7. All values:", students.values())
+
+# 8. Get all key–value pairs from a dictionary using .items().
+print("8. All key–value pairs:", students.items())
+
+# 9. Check if a given key exists in the dictionary.
+key_to_check = "Eva"
+print(f"9. Does '{key_to_check}' exist?:", key_to_check in students)
+
+# 10. Create a dictionary and print only keys using a loop.
+print("10. Printing keys using loop:")
+for key in students:
+    print(key)
+
+# 11. Create a dictionary and print only values using a loop.
+print("11. Printing values using loop:")
+for value in students.values():
+    print(value)
+
+# 12. Merge two dictionaries.
+extra_students = {"George": 87, "Hannah": 91}
+students.update(extra_students)
+print("12. After merging two dictionaries:", students)
+
+# 13. Find the key with the maximum value in a dictionary.
+max_key = max(students, key=students.get)
+print(f"13. Key with max value: {max_key} ({students[max_key]})")
+
+# 14. Create a nested dictionary and access the inner dictionary value.
+nested_dict = {
+    "student1": {"name": "Alice", "marks": 90},
+    "student2": {"name": "Bob", "marks": 92}
+}
+print("14. Bob's marks from nested dict:", nested_dict["student2"]["marks"])
+
+# 15. Create two lists and combine them into a dictionary using zip().
+names = ["Ian", "Jack", "Kelly"]
+marks = [85, 88, 90]
+combined_dict = dict(zip(names, marks))
+print("15. Combined dict using zip:", combined_dict)
+
+# 16. Create a dictionary using fromkeys() with same default value.
+keys_list = ["Math", "Science", "English"]
+default_value = 0
+subject_dict = dict.fromkeys(keys_list, default_value)
+print("16. Dictionary from fromkeys():", subject_dict)
+
+
+
+
+12-08-2025
+
+# 1. Function to print "Hello, World!"
+def hello_world():
+    print("1. Hello, World!")
+
+hello_world()
+
+# 2. Function that takes your name as input and prints a greeting message.
+def greet(name):
+    print(f"2. Hello, {name}! Welcome!")
+
+greet("Ashok")
+
+# 3. Function to find the sum of two numbers (take input from user).
+def sum_two_numbers(a, b):
+    return a + b
+
+num1, num2 = 5, 7  # Example values
+print(f"3. Sum of {num1} and {num2}:", sum_two_numbers(num1, num2))
+
+# 4. Function to return the square of a number.
+def square(n):
+    return n * n
+
+print("4. Square of 6:", square(6))
+
+# 5. Function to check if a number is even or odd.
+def even_or_odd(n):
+    return "Even" if n % 2 == 0 else "Odd"
+
+print("5. 7 is:", even_or_odd(7))
+
+# 6. Function to find the factorial of a given number.
+def factorial(num):
+    if num < 0:
+        return "Factorial does not exist for negative numbers"
+    fact = 1
+    for i in range(1, num + 1):
+        fact *= i
+    return fact
+
+print("6. Factorial of 5:", factorial(5))
+
+# 7. Function that takes a list and returns the sum of all its elements.
+def sum_list(lst):
+    return sum(lst)
+
+print("7. Sum of [1, 2, 3, 4]:", sum_list([1, 2, 3, 4]))
+
+# 8. Function that takes a list and returns a new list with only even numbers.
+def filter_even(lst):
+    return [x for x in lst if x % 2 == 0]
+
+print("8. Even numbers from [1, 2, 3, 4, 5, 6]:", filter_even([1, 2, 3, 4, 5, 6]))
+
+# 9. Function that takes two strings and returns the longer one.
+def longer_string(s1, s2):
+    return s1 if len(s1) >= len(s2) else s2
+
+print('9. Longer string between "Python" and "Java":', longer_string("Python", "Java"))
+
+# 10. Function that converts Celsius to Fahrenheit.
+def celsius_to_fahrenheit(c):
+    return (c * 9/5) + 32
+
+print("10. 37°C in Fahrenheit:", celsius_to_fahrenheit(37))
+
+
+
+
+
+
+
 
 
 
